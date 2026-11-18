@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "issue": "https://github.com/brent-stone/beadhub-oss/issues/5",
+  "research_date": "2026-11-18",
+  "assigned_branch": "research/cloudflare-contracts",
+  "baseline": "dd9541afbb2882d191173f46ab5b3503adde7709",
+  "method": "Public pinned source and official protocol specifications; static analysis only; no deployment, installation, hosted onboarding or private data.",
+  "versions": {
+    "beadhub": {
+      "commit": "dd9541afbb2882d191173f46ab5b3503adde7709",
+      "project_version": "0.3.1"
+    },
+    "aweb": {
+      "declared": ">=0.3.8",
+      "locked": "0.3.8",
+      "sdist_sha256": "750fdf19dd0f08010e28a3b522aa7fb5ff0cabb488c9a5554353e865fca8e4dd",
+      "source": "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+      "lock_source": "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/uv.lock",
+      "verified_source_members": [
+        {
+          "path": "src/aweb/migrations/aweb/001_initial.sql",
+          "sha256": "dcc383fa03c08931850c805fa82588b0519c81f5b8687b6af6b4d7763b880990",
+          "lines": 396
+        },
+        {
+          "path": "src/aweb/migrations/aweb/023_control_signals.sql",
+          "sha256": "afc7161a8f88ede9f699b00406a99f2c28c69a5514bd681c5e6fca37d1b34c01",
+          "lines": 14
+        },
+        {
+          "path": "src/aweb/reservations_service.py",
+          "sha256": "23435c20b3b4d62835d0a548971bae1812d6da204dee883419e29484fe0199f9",
+          "lines": 226
+        },
+        {
+          "path": "src/aweb/routes/reservations.py",
+          "sha256": "a6e13391f946a5c472be2fe9b04a45cf0b24e4158fcbc27bcbf5ba8a97edfb34",
+          "lines": 258
+        },
+        {
+          "path": "src/aweb/routes/events.py",
+          "sha256": "e47ec6ed8995baffa1b87a201985c1aef7e8d3eca626b6d4014f6d1a35db8ba9",
+          "lines": 328
+        },
+        {
+          "path": "src/aweb/routes/messages.py",
+          "sha256": "626a3d220be91cac55c812792962e20e7d5384849234e1fa1fb41dc2ded51d4b",
+          "lines": 509
+        },
+        {
+          "path": "src/aweb/messages_service.py",
+          "sha256": "04e7c3745688eefc0c4c65149408dbf6f9423614165af9081a5f1a922b24a1e1",
+          "lines": 117
+        },
+        {
+          "path": "src/aweb/tasks_service.py",
+          "sha256": "d5c53dea9e9c26bf7e996329cfe08edb2fadaf24d07360047cab49a70f487fea",
+          "lines": 728
+        },
+        {
+          "path": "src/aweb/chat_waiting.py",
+          "sha256": "2432310877dc406849d584227ec5b87ecb20c99fbd753a03951df1cba275a597",
+          "lines": 119
+        },
+        {
+          "path": "src/aweb/presence.py",
+          "sha256": "b9eb3514d2d0cc0e98f75d4b2419d42bca7a056a2cf3ef8f768951549f0a77fd",
+          "lines": 159
+        },
+        {
+          "path": "src/aweb/hooks.py",
+          "sha256": "8b13bcb90410d685d01ed0c62d53ce81a5cb3fc13e60ef823ffc1ffbcbba12f8",
+          "lines": 21
+        },
+        {
+          "path": "src/aweb/auth.py",
+          "sha256": "bc44e0ca503370725d80046296a2c3a07444edabedd93ecd6e528438a62f3710",
+          "lines": 458
+        },
+        {
+          "path": "src/aweb/routes/chat.py",
+          "sha256": "f9c3bac74c629d204a31f7309805463a1b7ebf97661be2941ac3cfd44f619e07",
+          "lines": 1102
+        },
+        {
+          "path": "src/aweb/chat_service.py",
+          "sha256": "759b1d2b6941bfea8bab4a31e26a8ac9114b36d817e0466fdcaec13a048786f9",
+          "lines": 434
+        }
+      ],
+      "artifact_verification": "Python research agent downloaded sdist, verified SHA256 against pinned uv.lock, copied .py/.sql only; contract researcher inspected those exact shared members."
+    },
+    "bdh": {
+      "observed_public_commit": "6be8c125bf483761f8ba037d9113f0f592cfd80b",
+      "server_pins_client": false,
+      "actual_installed_client": "not inspected",
+      "source": "https://github.com/awebai/bdh/blob/6be8c125bf483761f8ba037d9113f0f592cfd80b/go.mod"
+    },
+    "aw_library": {
+      "version": "v0.28.1-0.20260310092845-4d1bcd9bb1ae",
+      "source": "https://github.com/awebai/bdh/blob/6be8c125bf483761f8ba037d9113f0f592cfd80b/go.mod"
+    },
+    "modern_aweb_comparison": {
+      "commit": "1277041b2b8b968410e92a5b36a59f3c0592981b",
+      "source": "https://github.com/awebai/aweb/blob/1277041b2b8b968410e92a5b36a59f3c0592981b/docs/aweb-sot.md"
+    }
+  },
+  "schemas": [
+    {
+      "name": "server",
+      "tables": [
+        "projects",
+        "repos",
+        "workspaces",
+        "bead_claims",
+        "escalations",
+        "subscriptions",
+        "notification_outbox",
+        "audit_log",
+        "project_policies"
+      ],
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/migrations/server/001_initial.sql",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/migrations/server/002_add_projects_visibility.sql",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/migrations/server/003_add_workspace_timezone.sql"
+      ],
+      "invariants": [
+        "Active project slug uniqueness separately for null tenant and each tenant; visibility public/private.",
+        "Repository unique(project,canonical_origin); soft-delete and resurrection preserve identity.",
+        "Active workspace alias unique within project. UUID, project, repo, alias, type ownership; trigger protects project/repo/alias/type immutability, timestamps and repo-delete lifecycle. Agent workspace requires repo; dashboard workspace forbids repo.",
+        "Claims unique(project,bead,workspace), not unique(project,bead); database permits multi-owner rows, ordinary writes enforce stronger exclusivity in claims.py.",
+        "Subscription uniqueness includes COALESCE(repo,''); array event types. Outbox has pending/processing/completed/failed states and attempts.",
+        "Policy versions unique(project,version); projects active_policy_id points to policy. FK cascade/set-null and partial indexes affect deletion semantics."
+      ]
+    },
+    {
+      "name": "beads",
+      "tables": [
+        "beads_issues"
+      ],
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/migrations/beads/001_initial.sql",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/migrations/beads/002_search_indexes.sql"
+      ],
+      "invariants": [
+        "Unique(project,repo,branch,bead). UUID identity; labels array; parent and cross-repo dependencies JSONB; creator/close attribution.",
+        "Cross-schema closed_by_workspace_id FK to server.workspaces SET NULL. pgcrypto UUID and pg_trgm GIN substring indexes; concurrent index migration outside transaction."
+      ]
+    },
+    {
+      "name": "aweb",
+      "tables": [
+        "namespaces",
+        "projects",
+        "agents",
+        "api_keys",
+        "messages",
+        "chat_sessions",
+        "chat_session_participants",
+        "chat_messages",
+        "chat_read_receipts",
+        "reservations",
+        "contacts",
+        "agent_log",
+        "rotation_announcements",
+        "rotation_peer_acks",
+        "task_counters",
+        "tasks",
+        "task_dependencies",
+        "task_comments",
+        "policies",
+        "control_signals"
+      ],
+      "source": "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+      "members": [
+        "src/aweb/migrations/aweb/001_initial.sql",
+        "src/aweb/migrations/aweb/023_control_signals.sql"
+      ],
+      "invariants": [
+        "Active namespace/project/agent alias and DID uniqueness, namespace/project relationships; agent custody self/custodial, lifetime persistent/ephemeral, active/retired/deregistered status, encrypted signing_key_enc.",
+        "Mail message UUID, sender/recipient/project FKs, signatures/DIDs/thread/read_at; chat participant-set uniqueness(project,participant_hash), participant/read receipt composite keys, durable session messages.",
+        "Reservation PRIMARY KEY(project,resource_key), holder FK, acquired/expires timestamps and JSONB metadata; PostgreSQL state, not Redis.",
+        "Task counters allocate atomic next number via ON CONFLICT UPDATE RETURNING; unique(project,task_number); tasks status open/in_progress/closed, priority0..4, task/bug/feature; parent FK, dependency key+no-self check, comments FK; service checks dependency cycles via recursive SQL.",
+        "Policies version uniqueness and active pointer; durable controls signal type/consumed_at."
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "id": "composition",
+      "observation": "Shared pgdbm PostgreSQL pool hosts server, beads and aweb schemas; embedded aweb migrations are applied under module aweb-aweb. BeadHub mounts its overrides before overlapping aweb routers (init, agents, GET claims, policies, status, GET tasks). aweb owns remaining auth, mail, chat, reservations, contacts, conversations and events.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/db.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/api.py"
+      ]
+    },
+    {
+      "id": "preflight",
+      "observation": "POST /v1/bdh/command authenticates, binds actor, verifies live workspace and touches activity. It reads at most latest 200 project claims, resolves update in_progress/--claim IDs and rejects observed other-owner claims. It does not reserve or mutate claims. Unknown/ambiguous synced IDs resolve to no claim; same bead ID across repos is one project-level claim key.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/bdh.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/claims.py"
+      ]
+    },
+    {
+      "id": "client-order",
+      "observation": "Observed bdh first sends preflight; ordinarily explicit rejection blocks local execution. HTTP 410 aborts, identity mismatch retries init/key once; other HTTP/network errors warn and continue in local Beads mode. Auto-reserve is advisory. Successful bd mutation then exports JSONL and uploads sync; export failure can upload existing JSONL. No server rollback of local bd. Native mode without .beads uses authenticated /v1/tasks rather than bd and has no offline local task store.",
+      "sources": [
+        "https://github.com/awebai/bdh/blob/6be8c125bf483761f8ba037d9113f0f592cfd80b/internal/commands/passthrough.go",
+        "https://github.com/awebai/bdh/blob/6be8c125bf483761f8ba037d9113f0f592cfd80b/internal/commands/native.go"
+      ]
+    },
+    {
+      "id": "sync",
+      "observation": "Full mode requires nonempty JSONL and UPSERTS supplied issues; it is not replace-all deletion. Incremental carries changed issues and explicit deleted_ids. Branch is DEFAULT_BRANCH main. Upsert transaction locks existing row FOR UPDATE; rejects incoming updated_at only when both timestamps exist and incoming is strictly older. Equal/missing timestamps do not supply revision-CAS guarantees. Per-row conflicts retained for retry; no global atomic sync+claims+outbox transaction.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/bdh.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/beads_sync.py",
+        "https://github.com/awebai/bdh/blob/6be8c125bf483761f8ba037d9113f0f592cfd80b/internal/commands/passthrough.go"
+      ]
+    },
+    {
+      "id": "claim-commit",
+      "observation": "/sync applies issue upserts first, resolves IDs before deletions, applies deletions, then attempts claims for successful update in_progress. Each ordinary claim serializes(project,bead) via pg_advisory_xact_lock(hashtextextended(...)) inside transaction; it rejects other workspace, replays own claim idempotently (created via xmax), then updates focus outside that claim transaction. Lost race returns claim_rejected in successful sync response after local issue changed. Close/delete/status leaving in_progress releases every workspace claim and recomputes focus. Claims have no TTL expiry.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/bdh.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/claims.py"
+      ]
+    },
+    {
+      "id": "override",
+      "observation": "Observed bdh --:jump-in requires reason, strips flag before command_line, bypasses client preflight/close rejection and best-effort sends mail intent even if bd failed. It does not transmit takeover permission; pinned /sync upsert_claim still rejects a second owner. Database multi-owner comment and docs do not prove server join/takeover capability. Reservation revoke is a separate API contract.",
+      "sources": [
+        "https://github.com/awebai/bdh/blob/6be8c125bf483761f8ba037d9113f0f592cfd80b/internal/commands/passthrough.go",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/claims.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/migrations/server/001_initial.sql",
+        "https://github.com/awebai/aw/blob/4d1bcd9bb1ae/reservations.go"
+      ]
+    },
+    {
+      "id": "native-task-hooks",
+      "observation": "GET tasks merges legacy beads fallback with native task priority; inherited aweb owns task writes/dependencies/comments. A successful task status hook then tries BeadHub claim; conflict merely logs and returns, and cascade failures are caught. Native task write and server.bead_claims cannot be assumed atomic.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/tasks.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/mutation_hooks.py"
+      ]
+    },
+    {
+      "id": "auth",
+      "observation": "Project comes from verified aweb bearer details or signed internal wrapper context, never plain client project header. In direct mode enforce_actor_binding rejects differing non-null agent/workspace ID; scope/live workspace checks reject missing/deleted/foreign workspaces. /sync additionally resolves bearer lifecycle before mutations. Proxy v2 HMAC binds project/principal/actor; unsigned headers ignored when secret absent; wrapper owns actor binding. OSS init defaults ephemeral custodial agent, creates/ensures identity and mints key; shared secret wrapper is trust boundary, not public proof of SaaS authorization.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/aweb_introspection.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/internal_auth.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/auth.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/bdh.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/init.py"
+      ]
+    },
+    {
+      "id": "redis-beadhub",
+      "observation": "BeadHub presence HASH presence:workspace TTL actual default 1800s (comment says five minutes); project/repo/branch/global SET indexes and alias index TTL twice presence with lazy stale cleanup. Best-effort hooks clear presence. Redis fixed-window Lua INCR+EXPIRE init limit defaults 10/60s, fails closed 503 when unavailable. Redis Pub/Sub events:workspace are lossy signals, not durable event log or replay cursor. SSE reconnect/keepalive does not replay missed notifications.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/presence.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/rate_limit.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/events.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/mutation_hooks.py"
+      ]
+    },
+    {
+      "id": "notifications",
+      "observation": "Status changes commit before subscription notification intents are inserted separately. Outbox retries pending/failed at most 3, processes per-row FOR UPDATE SKIP LOCKED, calls aweb deliver_message via db_infra and then marks completed. No passed transaction/idempotency key proving exactly-once cross-schema delivery; crash gaps and duplicate risk must be considered. Audit logging best-effort. Per-project system sender deterministic UUID, alias system collision can fail notifications.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/notifications.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/bdh.py"
+      ]
+    },
+    {
+      "id": "policies",
+      "observation": "Server policy version allocation locks project row FOR UPDATE and max+1 with unique constraint; optional base_policy_id enforces active-policy optimistic concurrency. Preserve version/activation semantics or intentionally replace contract.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/policies.py"
+      ]
+    },
+    {
+      "id": "reservations-client",
+      "observation": "bdh autoreserve examines git status and optionally untracked files; locks use resource keys and metadata reason auto-reserve. Acquire conflict is 409 with holder/expiry; auto-reserve errors/conflicts warn, never prevent filesystem writes. Renew/release/revoke APIs separate from bead claims.",
+      "sources": [
+        "https://github.com/awebai/bdh/blob/6be8c125bf483761f8ba037d9113f0f592cfd80b/internal/commands/autoreserve.go",
+        "https://github.com/awebai/aw/blob/4d1bcd9bb1ae/reservations.go",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/README.md"
+      ]
+    },
+    {
+      "id": "dashboard",
+      "observation": "OSS frontend same-origin bearer transport uses local storage and can ingest aw_sk key from URL fragment then remove fragment. UI needs status/claims/workspaces+presence, tasks, escalation response, inbox/ack/send, chat/pending/history/admin and policy surfaces. api.ts references /v1/dashboard/config and identity absent among BeadHub-mounted routers: inherited/cloud availability must be proven rather than assuming complete hosted dashboard parity.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/frontend/src/lib/api.ts",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/api.py"
+      ]
+    },
+    {
+      "id": "gitlab",
+      "observation": "Generic origin canonicalizer supports git@host:path and scheme URLs, strips .git and ports, keeps host/path and nested GitLab groups. This is repository identity, not GitLab issue/MR/webhook/OAuth integration. No GitLab-specific tracker integration established by inspected server modules; native tasks and imported Beads are the implemented task sources.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/repos.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/tasks.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/bdh.py"
+      ]
+    },
+    {
+      "id": "authority",
+      "observation": "REPOSITORY distinguishes BeadHub OSS composition, private beadhub-saas overlay and modern aweb ownership. Phase-0 recovery uses older aweb while rebasing; modern federation/AWID trust or hosted free-tier promises cannot establish pinned runtime behavior. Current modern docs say events are wake signals; durable mail/chat require state fetch and reconnect reconciliation; runtime process owner decides wake.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/REPOSITORY.md",
+        "https://github.com/awebai/aweb/blob/1277041b2b8b968410e92a5b36a59f3c0592981b/docs/receiving-events.md",
+        "https://github.com/awebai/aweb/blob/1277041b2b8b968410e92a5b36a59f3c0592981b/docs/aweb-sot.md",
+        "https://github.com/awebai/aweb/blob/1277041b2b8b968410e92a5b36a59f3c0592981b/docs/awid-sot.md"
+      ]
+    },
+    {
+      "id": "aweb-reservation-authority",
+      "observation": "Exact 0.3.8 reservation state is PostgreSQL aweb.reservations. Acquire transaction SELECT FOR UPDATE; existing unexpired lease returns conflict even same holder, expired row replaced; PK arbitrates absent-row concurrent inserts (no absent-row lock guarantee). TTL clamped60..3600 seconds. Renew locks row, requires current holder and unexpired lease; missing/expired404, other409. Release missing/expired idempotent success, other holder409. Revoke only deletes caller-owned leases, optional prefix; no administrative takeover permission. Client comment force-releases is broader than actual server authorization. Expiry permits new acquisition, not task reassignment.",
+      "source": "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+      "members": [
+        "src/aweb/reservations_service.py",
+        "src/aweb/routes/reservations.py"
+      ]
+    },
+    {
+      "id": "aweb-events",
+      "observation": "Exact 0.3.8 GET /v1/events/stream is PostgreSQL polling each1s, not BeadHub Redis Pub/Sub. Deadline required, max300s. Initial sweep mail unread50, chat participant messages50 since epoch (query does not consult read receipts), ready tasks10, assigned tasks50. Later polls timestamps/set diffs; no replay cursor or exactly-once event guarantee. Control signals persisted then UPDATE consumed_at before SSE at-most-once, so disconnect can lose signal. Mail/chat durable content remains authoritative.",
+      "source": "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+      "members": [
+        "src/aweb/routes/events.py"
+      ]
+    },
+    {
+      "id": "aweb-mail-chat",
+      "observation": "Exact 0.3.8 mail and chat persist in PostgreSQL. deliver_message validates canonical sender alias and active same-project sender/recipient, INSERTs UUID (default random) with thread/signature metadata; route performs optional client-signed envelope handling or custodial sign-before-insert. Recipient-only ack sets read_at=COALESCE(read_at,NOW()) idempotently. Chat session participant hash deduplicates participant set; durable messages plus per-participant last_read_at. Redis chat:waiting:session ZSET timestamp scores,90s expiry and Lua atomic stale check/remove track connected waiters only, gracefully degrade false on Redis errors. aweb:presence:agent HASH TTL1800s and project SET index TTL2x distinct from BeadHub presence.",
+      "source": "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+      "members": [
+        "src/aweb/messages_service.py",
+        "src/aweb/routes/messages.py",
+        "src/aweb/chat_service.py",
+        "src/aweb/routes/chat.py",
+        "src/aweb/chat_waiting.py",
+        "src/aweb/presence.py"
+      ]
+    },
+    {
+      "id": "aweb-native-claims",
+      "observation": "Exact aweb GET /claims is active task assignments, overridden by BeadHub GET claims; no aweb claim mutation router. update_task locks task row; in_progress autoassigns actor if unassigned, conflicts if current assignee differs. Explicit assignee updates separate from status are possible; no maintainer-only takeover policy established. Closing recursively closes descendants transactionally. Number allocator and task INSERT separate so gaps can occur. Mutation callback awaited then errors swallowed; cannot infer atomic BeadHub hook projection.",
+      "source": "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+      "members": [
+        "src/aweb/tasks_service.py",
+        "src/aweb/routes/claims.py",
+        "src/aweb/hooks.py"
+      ]
+    },
+    {
+      "id": "protocol-discovery",
+      "observation": "Pinned composition provides FastAPI OpenAPI plus explicit routes and BeadHub /mcp tools/list/resources/list; exact aweb0.3.8 source does not expose well-known capability/protocol_version discovery contract. bdh sync has explicit sync_protocol_version and retries full on mismatch, while server /sync response always1 and does not enforce incoming version. Old aw library has fixed endpoint methods and X-Latest-Client-Version observations, not modern AWID discovery proof.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/api.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/bdh.py",
+        "https://github.com/awebai/aw/blob/4d1bcd9bb1ae/client.go"
+      ],
+      "source": "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz"
+    }
+  ],
+  "migration_assessment": {
+    "classification": "Engineering inference from inspected contracts; no measured effort or dollar estimate.",
+    "retain_postgres": "Lowest semantic port cost: retain SQL transactions, migrations, JSONB/arrays, advisory/row locks and pgdbm pool; runtime hosting/driver qualification remains separate.",
+    "replace_postgres": [
+      "Rewrite pgdbm migration/schema/table qualification, cross-schema joins/FKs/triggers/extensions, advisory/row locks, DISTINCT ON, ANY arrays, JSONB, timestamptz and xmin/xmax-dependent results.",
+      "Choose project ownership/partition boundary covering claims+task state; define transactions and idempotency for notification/mail instead of translating queries piecemeal.",
+      "Rebuild identity/key storage, lifecycle, durable mail/chat/ack/read, task numbering/deps/comments, policy versions and dashboard query projections from exact inherited aweb contracts."
+    ],
+    "replace_redis": [
+      "Exact Redis replacement scope: BeadHub presence indexes/alias TTL, initialization fixed-window counter and Pub/Sub; embedded aweb presence HASH/index TTL and chat waiter ZSET/Lua. Reservation acquire/renew/release belongs to PostgreSQL replacement, not Redis.",
+      "Separate durable state from lossy event delivery. New transport may change clients; reconnect must re-fetch authoritative unread/state, and acknowledgements must not mean completed work."
+    ]
+  },
+  "bounded_new_contract_proposal": {
+    "status": "Proposed research option, not accepted implementation specification.",
+    "scope": [
+      "Versioned discovery manifest declares capabilities/auth/event semantics; explicitly reject unsupported historical commands instead of silently claiming compatibility.",
+      "Authenticated actor and project derived server-side; explicit typed task mutation/claim/release requests with resource ID, expected revision and idempotency key; no command_line parsing or implicit alias authority.",
+      "Online claim transaction before externally coordinated work; local offline task edits may queue but cannot assert exclusive ownership. Represent post-mutation sync conflict honestly.",
+      "Explicit join versus transfer/takeover operation, reason and authorization; separate advisory file lease acquire/renew/release/revoke and TTL.",
+      "Durable mail/chat IDs, thread/conversation/read/ack semantics; event stream is lossy hint with reconnect snapshot; durable outbox and dedup/retry keys for delivery.",
+      "Retain canonical Git origin as optional reference; GitLab issue/MR operations are separate adapters requiring independently scoped authority.",
+      "Start minimal dashboard projection (team presence, claims, task, inbox/chat) and explicit unsupported hosted administration."
+    ]
+  },
+  "limits": [
+    "Static source analysis, not running application/client conformance, installed client identity, deployment evidence, migration rehearsal or performance/cost measurement.",
+    "Server dependency declares >=0.3.8; uv.lock describes 0.3.8 reproducible composition only. Unlocked install can resolve a later aweb version.",
+    "Public bdh commit observed separately; BeadHub does not pin an exact bdh executable. Historical client compatibility is not assumed mandatory.",
+    "Automatic expiry reassignment, maintainer-only pre-expiry takeover and affected-scope quarantine after uncertain GitLab write are proposed policy decisions, not established upstream guarantees; root user questions remain open."
+  ]
+}
