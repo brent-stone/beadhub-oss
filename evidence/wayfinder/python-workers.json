@@ -1,0 +1,2281 @@
+{
+  "schema_version": 1,
+  "issue": "https://github.com/brent-stone/beadhub-oss/issues/3",
+  "observed_at_utc": "2026-11-18T22:06:04.409185+00:00",
+  "method": "Public pinned source/static AST and text inspection plus current official Cloudflare documentation; no dependency installation, application import, runtime spike, deployment, cloud mutation or Desktop wake test.",
+  "beadhub": {
+    "repository": "brent-stone/beadhub-oss",
+    "commit": "dd9541afbb2882d191173f46ab5b3503adde7709",
+    "version": "0.3.1",
+    "lock_sha256": "4b49d1ef6f2707cc4a25573ada075d202725fd77ed9d6571188c45eba6c44d0d"
+  },
+  "related_source_pins": {
+    "aweb": {
+      "version": "0.3.8",
+      "sdist_url": "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+      "sha256": "750fdf19dd0f08010e28a3b522aa7fb5ff0cabb488c9a5554353e865fca8e4dd"
+    },
+    "pgdbm": {
+      "version": "0.4.0",
+      "sdist_url": "https://files.pythonhosted.org/packages/c4/67/cab5435b287681d74ebf8ecb3683bf8f82d6fcfef90434c1418cdfe63bec/pgdbm-0.4.0.tar.gz",
+      "sha256": "52f02eda63f7ebb98aa14c454762bfe2795ab2e22711227419fd99f96a38bc39"
+    }
+  },
+  "runtime_pin": {
+    "installed_version": null,
+    "tested_version": null,
+    "proposed_compatibility_date": "2026-11-18",
+    "required_flag": "python_workers",
+    "postgres_documented_minimum_date": "2026-09-08",
+    "note": "Workers Python/Pyodide version is compatibility-date selected; no exact installed runtime was queried or executed."
+  },
+  "locked_packages": [
+    {
+      "name": "aiofiles",
+      "version": "25.1.0"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.4"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.7.0"
+    },
+    {
+      "name": "anyio",
+      "version": "4.12.0"
+    },
+    {
+      "name": "asgi-lifespan",
+      "version": "2.1.0"
+    },
+    {
+      "name": "asyncpg",
+      "version": "0.31.0"
+    },
+    {
+      "name": "attrs",
+      "version": "25.4.0"
+    },
+    {
+      "name": "aweb",
+      "version": "0.3.8"
+    },
+    {
+      "name": "base58",
+      "version": "2.1.1"
+    },
+    {
+      "name": "bcrypt",
+      "version": "5.0.0"
+    },
+    {
+      "name": "beadhub",
+      "version": "0.3.1"
+    },
+    {
+      "name": "black",
+      "version": "25.12.0"
+    },
+    {
+      "name": "certifi",
+      "version": "2025.11.12"
+    },
+    {
+      "name": "cffi",
+      "version": "2.0.0"
+    },
+    {
+      "name": "click",
+      "version": "8.3.1"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6"
+    },
+    {
+      "name": "cryptography",
+      "version": "46.0.5"
+    },
+    {
+      "name": "dnspython",
+      "version": "2.8.0"
+    },
+    {
+      "name": "email-validator",
+      "version": "2.3.0"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.123.0"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "name": "httpx-sse",
+      "version": "0.4.3"
+    },
+    {
+      "name": "idna",
+      "version": "3.11"
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0"
+    },
+    {
+      "name": "isort",
+      "version": "7.0.0"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0"
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1"
+    },
+    {
+      "name": "librt",
+      "version": "0.7.7"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.0.0"
+    },
+    {
+      "name": "mcp",
+      "version": "1.26.0"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2"
+    },
+    {
+      "name": "mypy",
+      "version": "1.19.1"
+    },
+    {
+      "name": "mypy-extensions",
+      "version": "1.1.0"
+    },
+    {
+      "name": "packaging",
+      "version": "25.0"
+    },
+    {
+      "name": "pathspec",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pgdbm",
+      "version": "0.4.0"
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.5.1"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0"
+    },
+    {
+      "name": "psycopg2-binary",
+      "version": "2.9.11"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.12.5"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.41.5"
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.13.0"
+    },
+    {
+      "name": "pygments",
+      "version": "2.19.2"
+    },
+    {
+      "name": "pyjwt",
+      "version": "2.11.0"
+    },
+    {
+      "name": "pynacl",
+      "version": "1.6.2"
+    },
+    {
+      "name": "pytest",
+      "version": "9.0.1"
+    },
+    {
+      "name": "pytest-asyncio",
+      "version": "1.3.0"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.1"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.22"
+    },
+    {
+      "name": "pytokens",
+      "version": "0.3.0"
+    },
+    {
+      "name": "pywin32",
+      "version": "311"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3"
+    },
+    {
+      "name": "redis",
+      "version": "7.1.0"
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0"
+    },
+    {
+      "name": "rich",
+      "version": "14.2.0"
+    },
+    {
+      "name": "rpds-py",
+      "version": "0.30.0"
+    },
+    {
+      "name": "ruff",
+      "version": "0.14.9"
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4"
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1"
+    },
+    {
+      "name": "sse-starlette",
+      "version": "3.2.0"
+    },
+    {
+      "name": "starlette",
+      "version": "0.50.0"
+    },
+    {
+      "name": "typer",
+      "version": "0.20.0"
+    },
+    {
+      "name": "types-pyyaml",
+      "version": "6.0.12.20250915"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.15.0"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.2"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.38.0"
+    }
+  ],
+  "dependency_assessment": {
+    "documented_framework_support": [
+      "FastAPI",
+      "Pydantic",
+      "asyncpg via Hyperdrive"
+    ],
+    "unqualified_exact_pins": [
+      "fastapi 0.123.0",
+      "pydantic 2.12.5",
+      "pydantic-core 2.41.5",
+      "asyncpg 0.31.0",
+      "redis 7.1.0",
+      "cryptography 46.0.5",
+      "pynacl 1.6.2",
+      "bcrypt 5.0.0",
+      "mcp 1.26.0",
+      "sse-starlette 3.2.0",
+      "email-validator 2.3.0"
+    ],
+    "note": "Pure/PyEmscripten/Pyodide packages are documented supported categories; host wheels in uv.lock do not establish current Pyodide incompatibility or exact-version availability. bcrypt declared but no direct bcrypt import found in scanned server src; do not call it proven startup blocker."
+  },
+  "official_sources": {
+    "python": "https://developers.cloudflare.com/workers/languages/python/",
+    "packages": "https://developers.cloudflare.com/workers/languages/python/packages/",
+    "fastapi": "https://developers.cloudflare.com/workers/languages/python/packages/fastapi/",
+    "stdlib": "https://developers.cloudflare.com/workers/languages/python/stdlib/",
+    "startup": "https://developers.cloudflare.com/workers/languages/python/how-python-workers-work/",
+    "postgres": "https://developers.cloudflare.com/hyperdrive/examples/python-workers/",
+    "storage": "https://developers.cloudflare.com/durable-objects/api/sqlite-storage-api/",
+    "alarms": "https://developers.cloudflare.com/durable-objects/api/alarms/",
+    "background": "https://developers.cloudflare.com/workers/runtime-apis/context/#waituntil"
+  },
+  "findings": [
+    {
+      "id": "entrypoint",
+      "owner": "beadhub",
+      "classification": "adapt",
+      "paths": [
+        "src/beadhub/__init__.py",
+        "src/beadhub/api.py",
+        "src/beadhub/cli.py"
+      ],
+      "observed": "Package __init__ eagerly imports api, CLI and DatabaseInfra; api creates a module-level app; CLI eagerly imports uvicorn. Even importing a pure submodule reaches these package initializers. Standalone lifespan pings Redis, creates pgdbm pool, applies schemas/migrations. Library mode requires initialized db_infra plus redis and sets app.state resources/mutation handler.",
+      "adaptation": "Decouple package initializer/CLI; Workers ASGI entrypoint replaces uvicorn serve; initialize request-safe binding adapters at event time; explicitly qualify lifespan, cleanup and concurrency rather than assuming a daemon startup/shutdown. Disable packaged frontend and route assets through binding.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/api.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/__init__.py",
+        "https://developers.cloudflare.com/workers/languages/python/packages/fastapi/",
+        "https://developers.cloudflare.com/workers/languages/python/how-python-workers-work/"
+      ]
+    },
+    {
+      "id": "pure-candidates",
+      "owner": "beadhub",
+      "classification": "reuse-candidate",
+      "paths": [
+        "src/beadhub/jsonl.py",
+        "src/beadhub/names.py",
+        "src/beadhub/pagination.py",
+        "src/beadhub/workspace_config.py"
+      ],
+      "observed": "JSONL parser/depth-count validation, naming constants and cursor encoding/validation are mostly stdlib logic. Pagination response models need Pydantic. WorkspaceConfig parsing can be separated from local .beadhub reads.",
+      "adaptation": "Reuse extracted pure logic and tests after fixing package import graph; validate exact Pydantic/core version in Workers. Do not claim module imports have run.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/jsonl.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/names.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/pagination.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/workspace_config.py"
+      ]
+    },
+    {
+      "id": "postgres",
+      "owner": "beadhub+pgdbm+aweb",
+      "classification": "backend-replacement-for-native-storage",
+      "paths": [
+        "src/beadhub/db.py",
+        "src/beadhub/migrations/",
+        "src/beadhub/notifications.py",
+        "aweb:src/aweb/stable_id.py",
+        "aweb:src/aweb/tasks_service.py",
+        "pgdbm:src/pgdbm/"
+      ],
+      "observed": "DatabaseInfra builds server, beads and aweb schema managers on one shared PostgreSQL pool. Applies BeadHub migrations and packaged aweb migrations with aweb-aweb history. SQL includes schema/template tables, numbered parameters, JSONB/casts, PostgreSQL search indexes/functions, interval arithmetic, UUID arrays/LATERAL, row locking and transaction contracts. pgdbm is pure wheel but depends on asyncpg.",
+      "adaptation": "DO SQLite/D1 require deliberate schema/query/transaction/error/serialization changes and ownership routing, not a DSN swap. DO storage is private per object; cross-schema or cross-object work needs new transaction/commit rules. Retaining PostgreSQL via Hyperdrive is documented feasible for Python asyncpg with date >=2026-09-08 but is not Cloudflare-native storage. Exact asyncpg 0.31.0/pgdbm 0.4.0 pool behavior remains unverified.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/db.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/notifications.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/migrations/beads/002_search_indexes.sql",
+        "https://developers.cloudflare.com/durable-objects/api/sqlite-storage-api/",
+        "https://developers.cloudflare.com/hyperdrive/examples/python-workers/"
+      ]
+    },
+    {
+      "id": "redis",
+      "owner": "beadhub+aweb",
+      "classification": "backend-replacement-or-qualify-external-client",
+      "paths": [
+        "src/beadhub/presence.py",
+        "src/beadhub/rate_limit.py",
+        "src/beadhub/events.py",
+        "aweb:src/aweb/chat_waiting.py",
+        "aweb:src/aweb/presence.py"
+      ],
+      "observed": "Presence uses hashes, expiring keys, sets/indexes and pipelines. Rate limiting executes Lua atomic INCR+EXPIRE, TTL and fail-closed errors. BeadHub SSE subscribes Redis pubsub with keepalive/reconnect. aweb chat waiting uses sorted sets, TTL, pipelines and Lua stale-entry removal.",
+      "adaptation": "Native DO operations can express authoritative state, leases and atomic counters; define project/session keying, expiry timestamps, retry idempotency, cleanup and fanout explicitly. KV is not a drop-in Redis semantics replacement. External Redis TCP might be possible with modern sockets but exact redis 7.1.0 pubsub/pooling is unqualified and still retains Redis service. SSE transport can be adapted, but must define reconnection/replay from durable state rather than assuming pubsub history.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/presence.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/rate_limit.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/events.py",
+        "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+        "https://developers.cloudflare.com/hyperdrive/examples/python-workers/"
+      ]
+    },
+    {
+      "id": "aweb-owned",
+      "owner": "aweb",
+      "classification": "upstream-seam",
+      "paths": [
+        "src/aweb/deps.py",
+        "src/aweb/hooks.py",
+        "src/aweb/auth.py",
+        "src/aweb/did.py",
+        "src/aweb/signing.py",
+        "src/aweb/custody.py",
+        "src/aweb/*_service.py"
+      ],
+      "observed": "Inherited aweb owns identity/auth, messaging/chat, reservations, tasks, contacts, conversations and protocol routers; BeadHub mounts them and overrides selected agent/status/policy/task/claim paths. deps.get_db/get_redis use app.state, database contract get_manager; fire_mutation_hook awaits callback and catches errors despite fire-and-forget wording. aweb package initializer imports CLI. DID/signing import PyNaCl; custody uses cryptography AESGCM.",
+      "adaptation": "A reusable backend must reach aweb services as well as BeadHub routes. Keep backend-neutral service interfaces/errors/hooks upstream where feasible; BeadHub owns workspace/repo/beads/escalation/subscription integration. Extract truly pure aweb names/service_errors and portions of DID/stable-ID serialization only after separating crypto/storage imports; qualify signing/verification/encryption and preserve identity tenant binding with vectors. Native JS WebCrypto is an alternative implementation requiring contract tests.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/api.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/aweb_context.py",
+        "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz"
+      ]
+    },
+    {
+      "id": "filesystem-process",
+      "owner": "beadhub+aweb",
+      "classification": "adapt-and-exclude-local-client",
+      "paths": [
+        "src/beadhub/defaults.py",
+        "src/beadhub/workspace_config.py",
+        "src/beadhub/cli.py",
+        "src/beadhub/db.py",
+        "aweb:src/aweb/cli.py"
+      ],
+      "observed": "Defaults and migrations read bundled files; frontend serves local dist if present; workspace_config reads current-directory .beadhub. Static scan found no subprocess or aiofiles use in BeadHub/aweb src despite aiofiles declared by BeadHub. CLI and local workspace/agent execution are distinct from coordination service.",
+      "adaptation": "Bundled read-only content may be packaged or embedded after verification; use bindings for durable writes/assets and settings. Do not move local repo/Beads Dolt/model execution into Workers. No server-side subprocess replacement is indicated by scanned source, but this does not qualify CLI/client operation in Workers. Threads and multiprocessing are not functional per Cloudflare stdlib docs; do not add thread-backed aiofiles work as port strategy.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/defaults.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/workspace_config.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/pyproject.toml",
+        "https://developers.cloudflare.com/workers/languages/python/stdlib/"
+      ]
+    },
+    {
+      "id": "background-outbox",
+      "owner": "beadhub+aweb",
+      "classification": "adapt",
+      "paths": [
+        "src/beadhub/notifications.py",
+        "src/beadhub/routes/beads.py",
+        "src/beadhub/routes/bdh.py",
+        "src/beadhub/events.py",
+        "aweb:src/aweb/hooks.py"
+      ],
+      "observed": "Notification intent recording and processing are explicitly invoked by bead/bdh requests; no asyncio.create_task or FastAPI BackgroundTasks scheduling found in scanned server src. Outbox uses pending/failed attempts and per-entry FOR UPDATE SKIP LOCKED; deliver_message uses inherited aweb service. SSE is live request work. Mutation hooks are awaited best-effort and exception swallowing may lose advisory broadcasts.",
+      "adaptation": "Keep intent/effect recovery durable and replayable. For guaranteed background draining use DO alarms or Queues with idempotent effects rather than process loops or unawaited coroutines. Alarms have at-least-once retries and one pending alarm per object; waitUntil is bounded (30 seconds after HTTP invocation end), not a durable scheduler. Server event/wakeup delivery is not proof Codex Desktop executed.",
+      "sources": [
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/notifications.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/beads.py",
+        "https://github.com/brent-stone/beadhub-oss/blob/dd9541afbb2882d191173f46ab5b3503adde7709/src/beadhub/routes/bdh.py",
+        "https://files.pythonhosted.org/packages/88/44/73ad28849bc2bd27f81e51cd9b5b49e18fb4d4d8cf602afff1f4c50d949d/aweb-0.3.8.tar.gz",
+        "https://developers.cloudflare.com/workers/runtime-apis/context/#waituntil",
+        "https://developers.cloudflare.com/durable-objects/api/alarms/"
+      ]
+    }
+  ],
+  "options": [
+    {
+      "option": "Python ASGI plus native DO adapters",
+      "benefit": "Retain selected validation/models/routes/service logic; Python DO/SQLite/alarms are documented.",
+      "cost": "Both BeadHub and aweb storage coupling must change; eager imports, crypto packages, lifespan and Redis semantics require qualification.",
+      "decision_selected": false
+    },
+    {
+      "option": "Focused TypeScript/Workers native rewrite",
+      "benefit": "Direct native bindings, DO SQL/alarms/WebCrypto; breaking wire contracts allowed by map.",
+      "cost": "Reimplement accepted domain invariants, tenant/auth binding, concurrency, subscriptions and effect recovery; existing tests become specification evidence rather than runtime proof.",
+      "decision_selected": false
+    },
+    {
+      "option": "Python plus retained PostgreSQL/Redis",
+      "benefit": "Potentially highest source reuse; asyncpg Hyperdrive support is documented.",
+      "cost": "Does not meet native-storage conversion alone; retains resource/cost/operations dependencies and needs exact-client qualification.",
+      "decision_selected": false
+    }
+  ],
+  "prototype_requirements": [
+    "Freeze exact compatibility date, Python/Pyodide/tool versions and package resolution; bundle/import actual BeadHub+aweb, not a hello FastAPI app.",
+    "Qualify both package initializers and crypto identity round trips with public vectors; remove CLI eager imports.",
+    "Exercise actual create_app library lifecycle, env binding scoping and two concurrent tenant requests.",
+    "Demonstrate one real write/read/rollback claim or task path with selected DO/D1 backend and contention/retry/expiry invariants; migrate SQL deliberately.",
+    "Exercise outbox crash after effect/before receipt, duplicate delivery and alarm recovery plus SSE/client reconnect and durable replay.",
+    "Keep actual awake/running Codex Desktop wake+execution as separate required end-to-end qualification; this ticket proves none.",
+    "Measure CPU/memory/startup/storage/fanout and Cloudflare costs against USD40/month before rollout."
+  ],
+  "source_inventory": [
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/__init__.py",
+      "sha256": "c55e05e0a21c0e3ce3040b9b81b7e7a97406ca40d255b099de1f2006c28b24f2",
+      "lines": 12,
+      "imports": [
+        "api",
+        "cli",
+        "db",
+        "importlib.metadata"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/api.py",
+      "sha256": "e9195f4e25db9d5c959ec339b8027d7fe26b272a09c1cbf0c03f17b4eb649e40",
+      "lines": 320,
+      "imports": [
+        "aweb.routes.agents",
+        "aweb.routes.auth",
+        "aweb.routes.chat",
+        "aweb.routes.claims",
+        "aweb.routes.contacts",
+        "aweb.routes.conversations",
+        "aweb.routes.events",
+        "aweb.routes.init",
+        "aweb.routes.messages",
+        "aweb.routes.policies",
+        "aweb.routes.projects",
+        "aweb.routes.reservations",
+        "aweb.routes.status",
+        "aweb.routes.tasks",
+        "aweb.service_errors",
+        "config",
+        "contextlib",
+        "db",
+        "fastapi",
+        "fastapi.responses",
+        "fastapi.staticfiles",
+        "logging",
+        "mutation_hooks",
+        "os",
+        "pathlib",
+        "redis.asyncio",
+        "routes.agents",
+        "routes.bdh",
+        "routes.beads",
+        "routes.claims",
+        "routes.escalations",
+        "routes.init",
+        "routes.mcp",
+        "routes.policies",
+        "routes.repos",
+        "routes.status",
+        "routes.subscriptions",
+        "routes.tasks",
+        "routes.workspaces",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/auth.py",
+      "sha256": "32e092e5425e80410df7492e9d4b2eecfbab6fe0a901ed35964646c0ba531b03",
+      "lines": 115,
+      "imports": [
+        "__future__",
+        "beadhub.aweb_introspection",
+        "fastapi",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/aweb_context.py",
+      "sha256": "de0450aaf4e862597f18f0110bf386faa7a87a56771a5969e7b613573c20c7b5",
+      "lines": 94,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "dataclasses",
+        "fastapi",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/aweb_introspection.py",
+      "sha256": "56e271b46a2bbba9650fd7c4ce23579c7baffcc93c11d4ab55cdfb2b5e9a4817",
+      "lines": 70,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "dataclasses",
+        "fastapi",
+        "internal_auth"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/beads_sync.py",
+      "sha256": "6d1a6c26e053a337e3f98aa38dcd00bb8990b477234e5f818993dbee85da0d04",
+      "lines": 514,
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "datetime",
+        "json",
+        "logging",
+        "pgdbm",
+        "re",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/claims.py",
+      "sha256": "7e761eb8d32bf75e5b2ae861e34e19939caf0692b08bedf1a824e02a73bd1899",
+      "lines": 419,
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "datetime",
+        "db",
+        "json",
+        "logging",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/cli.py",
+      "sha256": "694f36a40b92a1ac8309aa7148c7c1e709c5e60053b3af21dae025c4218df54c",
+      "lines": 330,
+      "imports": [
+        "config",
+        "httpx",
+        "json",
+        "os",
+        "typer",
+        "uvicorn",
+        "workspace_config"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/config.py",
+      "sha256": "71eb90acffe46439931ff6c18dc6071f6cb9c43a9b5e5fcff2b8e04670751b38",
+      "lines": 65,
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/db.py",
+      "sha256": "1a313607304610d0ff552fcb87f5863b1b37dd4913b70aaf2cbe9532177e55ca",
+      "lines": 129,
+      "imports": [
+        "__future__",
+        "asyncio",
+        "aweb",
+        "config",
+        "fastapi",
+        "pathlib",
+        "pgdbm",
+        "pgdbm.migrations",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/defaults.py",
+      "sha256": "53b050da94ff1b0044878f481bc2b4a75d7a274b5eada1e51ee4b5f9220b4387",
+      "lines": 262,
+      "imports": [
+        "copy",
+        "logging",
+        "pathlib",
+        "threading",
+        "typing",
+        "yaml"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/events.py",
+      "sha256": "68284012a770a532f85f8b03c8900e91bac230425b6c00f55021d9665212b0fb",
+      "lines": 424,
+      "imports": [
+        "__future__",
+        "asyncio",
+        "beadhub.beads_sync",
+        "dataclasses",
+        "datetime",
+        "enum",
+        "json",
+        "logging",
+        "redis.asyncio",
+        "redis.asyncio.client",
+        "redis.exceptions",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/internal_auth.py",
+      "sha256": "cb35d59181d3c230ab71a8bf77ce1b29b99f9ae558078aebf830257e4de276e0",
+      "lines": 138,
+      "imports": [
+        "__future__",
+        "fastapi",
+        "hashlib",
+        "hmac",
+        "logging",
+        "os",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/jsonl.py",
+      "sha256": "ae286be9d66da5eb429a323e3407300b7370a39f737bb8625b4f22063bfb1ad0",
+      "lines": 68,
+      "imports": [
+        "__future__",
+        "json",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/logging.py",
+      "sha256": "728ade5206cad2298586e874c2a5c6ff4f2776b3fdbedf284a85ebd1b7b7f990",
+      "lines": 62,
+      "imports": [
+        "__future__",
+        "datetime",
+        "json",
+        "logging",
+        "sys",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/migrations/beads/001_initial.sql",
+      "sha256": "238eec9dc67d47b7f2178dadb81026a2e0adc9e3f0dd44d6cbe1da7741b9c95c",
+      "lines": 70
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/migrations/beads/002_search_indexes.sql",
+      "sha256": "47664873e48ef3b9eff14c8ded0e272197ec514bbb4189ff1226408581afcd69",
+      "lines": 20
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/migrations/server/001_initial.sql",
+      "sha256": "14d2d2a708345febe53c12c4b6f604b0ca4a1bfd763aca661fbba999984f8afd",
+      "lines": 279
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/migrations/server/002_add_projects_visibility.sql",
+      "sha256": "e3c839396bf30ec6ccb42b2cc436b9f4cb12500bc8c2cd1993bcb27ba79b16e4",
+      "lines": 18
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/migrations/server/003_add_workspace_timezone.sql",
+      "sha256": "ea357a19713e7c294c841d5794962f3aa57437af97a4e4e12aa8860f042c9027",
+      "lines": 4
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/mutation_hooks.py",
+      "sha256": "1b0498358638ad879d115aea0d6744cbcaf66ecebec8075f0902d6ef9cc731ce",
+      "lines": 388,
+      "imports": [
+        "__future__",
+        "claims",
+        "db",
+        "events",
+        "logging",
+        "presence",
+        "redis.asyncio",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/names.py",
+      "sha256": "c4a8108166d2eebbcadc469cfd2f50d72eedab8a88fc234665b501b11b227ce9",
+      "lines": 33,
+      "imports": [
+        "__future__"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/notifications.py",
+      "sha256": "6ff2526ac0e6bbd57f2bfc6fe4f18e6b005f0b01f0ec427079362e0ef7b0712c",
+      "lines": 324,
+      "imports": [
+        "__future__",
+        "asyncpg.exceptions",
+        "aweb.messages_service",
+        "beads_sync",
+        "db",
+        "json",
+        "logging",
+        "routes.subscriptions",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/pagination.py",
+      "sha256": "95c281c3f081c01839ff074110db57bae2fc53a35c6b189bf5a8cec1cffe45c7",
+      "lines": 125,
+      "imports": [
+        "__future__",
+        "base64",
+        "json",
+        "pydantic",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/presence.py",
+      "sha256": "b85fa2f4ac665c54cc16a2484a445a2744de7cc53b14e6f12a6dff43768c8739",
+      "lines": 504,
+      "imports": [
+        "__future__",
+        "datetime",
+        "redis.asyncio",
+        "roles",
+        "typing",
+        "urllib.parse"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/rate_limit.py",
+      "sha256": "2a489cc0266ff1a3b0a0436015cda6d4f32f2c36b9084e120585e599604eb07e",
+      "lines": 152,
+      "imports": [
+        "__future__",
+        "fastapi",
+        "logging",
+        "os",
+        "redis.asyncio",
+        "redis.exceptions",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/redis_client.py",
+      "sha256": "7fd2113d01f40ce88ce610bb0ff2f11620abef20b2aa364d6b203c6be43d9785",
+      "lines": 11,
+      "imports": [
+        "__future__",
+        "fastapi",
+        "redis.asyncio"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/roles.py",
+      "sha256": "e38d94431810f6560cfdc732bf09fcd37b3e2adfb464472b0cc93cfa7b0e1e9b",
+      "lines": 35,
+      "imports": [
+        "__future__",
+        "re"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "lines": 1,
+      "imports": []
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/agents.py",
+      "sha256": "734a02eb5258b1b5dffa34f5c4e2ef6eecf4c446f62c0a7874e49ba112c67a90",
+      "lines": 316,
+      "imports": [
+        "__future__",
+        "aweb.alias_allocator",
+        "aweb.auth",
+        "beadhub.auth",
+        "beadhub.aweb_introspection",
+        "beads_sync",
+        "config",
+        "db",
+        "fastapi",
+        "presence",
+        "pydantic",
+        "redis.asyncio",
+        "redis_client",
+        "roles",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/bdh.py",
+      "sha256": "deef6cd7cd1e3809e5390018b0fa358707e0b409553fe485c40c3abf1166da4f",
+      "lines": 793,
+      "imports": [
+        "__future__",
+        "beadhub.auth",
+        "beadhub.aweb_context",
+        "beadhub.aweb_introspection",
+        "beadhub.beads_sync",
+        "beadhub.claims",
+        "beadhub.routes.repos",
+        "datetime",
+        "db",
+        "events",
+        "fastapi",
+        "json",
+        "jsonl",
+        "logging",
+        "notifications",
+        "pgdbm",
+        "presence",
+        "pydantic",
+        "redis.asyncio",
+        "redis_client",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/beads.py",
+      "sha256": "2b296dcc398eb4835642ab166a219ed84075fb6707267e6008cec64880c81195",
+      "lines": 769,
+      "imports": [
+        "__future__",
+        "beadhub.auth",
+        "beadhub.aweb_context",
+        "beadhub.aweb_introspection",
+        "beads_sync",
+        "datetime",
+        "db",
+        "events",
+        "fastapi",
+        "json",
+        "jsonl",
+        "logging",
+        "notifications",
+        "pagination",
+        "pydantic",
+        "redis.asyncio",
+        "redis_client",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/claims.py",
+      "sha256": "01bd0f5a4376cf38841ef4b86fd218152b9ea4015e50b85149283e887cd11d81",
+      "lines": 141,
+      "imports": [
+        "beadhub.auth",
+        "beadhub.aweb_introspection",
+        "datetime",
+        "db",
+        "fastapi",
+        "pagination",
+        "pydantic",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/escalations.py",
+      "sha256": "872d2b066cded198954f31b7871ff4d6b69aa4de039f24ddac4cda9998f8ca50",
+      "lines": 480,
+      "imports": [
+        "__future__",
+        "beadhub.auth",
+        "beadhub.aweb_introspection",
+        "beads_sync",
+        "datetime",
+        "db",
+        "events",
+        "fastapi",
+        "json",
+        "pagination",
+        "presence",
+        "pydantic",
+        "redis.asyncio",
+        "redis_client",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/init.py",
+      "sha256": "960b59ec4c4f16c88718ef3e508daa8298e611571308c38e493bf66dfa0124b9",
+      "lines": 415,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.bootstrap",
+        "beadhub.beads_sync",
+        "beadhub.db",
+        "beadhub.names",
+        "beadhub.rate_limit",
+        "beadhub.redis_client",
+        "beadhub.roles",
+        "beadhub.routes.repos",
+        "datetime",
+        "fastapi",
+        "pydantic",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/mcp.py",
+      "sha256": "0b4bc7f518f0c7b01877a622dd4561d3d6085967618936de91e9df0c1c705609",
+      "lines": 1041,
+      "imports": [
+        "__future__",
+        "aweb.messages_service",
+        "beadhub.auth",
+        "beadhub.aweb_introspection",
+        "beads",
+        "datetime",
+        "db",
+        "escalations",
+        "fastapi",
+        "json",
+        "logging",
+        "presence",
+        "redis.asyncio",
+        "redis_client",
+        "status",
+        "subscriptions",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/policies.py",
+      "sha256": "71f641da3ad1e0ae481554808086da66142069b71eb333a92b9f4a024c0d63b8",
+      "lines": 869,
+      "imports": [
+        "__future__",
+        "beadhub.auth",
+        "beadhub.aweb_introspection",
+        "datetime",
+        "db",
+        "defaults",
+        "fastapi",
+        "hashlib",
+        "json",
+        "logging",
+        "pgdbm",
+        "pydantic",
+        "typing"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/repos.py",
+      "sha256": "7c1c152a18e3955d5917e5cb7616740cc229ad40cd9761a0a38bf0ce34dc3bfc",
+      "lines": 543,
+      "imports": [
+        "__future__",
+        "aweb.bootstrap",
+        "datetime",
+        "db",
+        "fastapi",
+        "logging",
+        "pagination",
+        "presence",
+        "pydantic",
+        "re",
+        "redis.asyncio",
+        "redis_client",
+        "typing",
+        "urllib.parse",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/status.py",
+      "sha256": "f84ee238a9df4656d8ca099d7532c0bb4c4f3bc429d16dc9a5232e1fcc05deda",
+      "lines": 571,
+      "imports": [
+        "__future__",
+        "beadhub.auth",
+        "beadhub.aweb_introspection",
+        "dataclasses",
+        "datetime",
+        "db",
+        "events",
+        "fastapi",
+        "fastapi.responses",
+        "internal_auth",
+        "presence",
+        "redis.asyncio",
+        "redis_client",
+        "time",
+        "typing",
+        "uuid",
+        "workspaces"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/subscriptions.py",
+      "sha256": "e23c5523b57d5c70dea46cc1d6ac014506e33bc0de6eca56d4e0b23537903009",
+      "lines": 309,
+      "imports": [
+        "__future__",
+        "beadhub.auth",
+        "beadhub.aweb_introspection",
+        "db",
+        "fastapi",
+        "pydantic",
+        "re",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/tasks.py",
+      "sha256": "c23a182464fd72f9817f37794b47290e66481e583aae73499750c7f4aa8b8756",
+      "lines": 336,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.service_errors",
+        "aweb.tasks_service",
+        "db",
+        "fastapi",
+        "hashlib",
+        "json",
+        "logging",
+        "pagination",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/routes/workspaces.py",
+      "sha256": "80757a263ff3c72d743afbab394b3023578eae100487f0e892c3ada4e34a5fdb",
+      "lines": 1695,
+      "imports": [
+        "__future__",
+        "asyncpg.exceptions",
+        "aweb.bootstrap",
+        "aweb.presence",
+        "bdh",
+        "beadhub.auth",
+        "beadhub.aweb_context",
+        "beadhub.aweb_introspection",
+        "beads_sync",
+        "config",
+        "datetime",
+        "db",
+        "fastapi",
+        "internal_auth",
+        "logging",
+        "names",
+        "pagination",
+        "pgdbm.errors",
+        "presence",
+        "pydantic",
+        "re",
+        "redis.asyncio",
+        "redis_client",
+        "repos",
+        "roles",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "beadhub",
+      "path": "src/beadhub/workspace_config.py",
+      "sha256": "3227ac5a45ba9051a93220213c324c0d5218de3bd611e9abab822f1e28669cb7",
+      "lines": 139,
+      "imports": [
+        "dataclasses",
+        "pathlib"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/__init__.py",
+      "sha256": "49e252fe775e107876d4ea2875eaf5578e5e551633e0331116c3b10403eb2161",
+      "lines": 9,
+      "imports": [
+        "cli"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/alias_allocator.py",
+      "sha256": "929c8eebd693c143480dcf918453167e5b34f89f0405b7ee78bacc29eba96572",
+      "lines": 43,
+      "imports": [
+        "__future__",
+        "aweb.names",
+        "collections.abc"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/api.py",
+      "sha256": "63e53316f50754fe4ea4b3416516c6c8c487708c3443016b31a47a84cc18c9cd",
+      "lines": 121,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.db",
+        "aweb.routes.agents",
+        "aweb.routes.auth",
+        "aweb.routes.chat",
+        "aweb.routes.claims",
+        "aweb.routes.contacts",
+        "aweb.routes.conversations",
+        "aweb.routes.events",
+        "aweb.routes.init",
+        "aweb.routes.messages",
+        "aweb.routes.policies",
+        "aweb.routes.projects",
+        "aweb.routes.reservations",
+        "aweb.routes.status",
+        "aweb.routes.tasks",
+        "aweb.service_errors",
+        "contextlib",
+        "fastapi",
+        "fastapi.responses",
+        "os",
+        "redis.asyncio",
+        "typing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/auth.py",
+      "sha256": "bc44e0ca503370725d80046296a2c3a07444edabedd93ecd6e528438a62f3710",
+      "lines": 457,
+      "imports": [
+        "__future__",
+        "fastapi",
+        "hashlib",
+        "hmac",
+        "logging",
+        "os",
+        "re",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/bootstrap.py",
+      "sha256": "6b492f26d8ccfbddccb8e44c25fd594f83c43de2091698d371b715697a8325bc",
+      "lines": 544,
+      "imports": [
+        "__future__",
+        "asyncpg.exceptions",
+        "aweb.alias_allocator",
+        "aweb.auth",
+        "aweb.custody",
+        "aweb.did",
+        "aweb.stable_id",
+        "dataclasses",
+        "json",
+        "logging",
+        "re",
+        "secrets",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/chat_service.py",
+      "sha256": "759b1d2b6941bfea8bab4a31e26a8ac9114b36d817e0466fdcaec13a048786f9",
+      "lines": 433,
+      "imports": [
+        "__future__",
+        "aweb.service_errors",
+        "datetime",
+        "hashlib",
+        "logging",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/chat_waiting.py",
+      "sha256": "2432310877dc406849d584227ec5b87ecb20c99fbd753a03951df1cba275a597",
+      "lines": 118,
+      "imports": [
+        "__future__",
+        "logging",
+        "time"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/cli.py",
+      "sha256": "4beb476163976d409e15a8646f402644ad37f627df264e314d64fb5873c223e4",
+      "lines": 167,
+      "imports": [
+        "__future__",
+        "asyncio",
+        "aweb.auth",
+        "aweb.config",
+        "aweb.db",
+        "os",
+        "secrets",
+        "typer",
+        "uuid",
+        "uvicorn"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/client.py",
+      "sha256": "45d3e39f304f820cfb0b3f1d5e8ab880051aa3651f4e0781ddccc0f12f1bcab3",
+      "lines": 100,
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "fastapi",
+        "httpx"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/config.py",
+      "sha256": "5b18e45e75431fb9fc30c669dd6c13a0aca68bfda7335d64f23f2de0cc24db7a",
+      "lines": 27,
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "os"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/contacts.py",
+      "sha256": "a5a177a0ca9e5cd30e0ffdfa395c02fbb8109bf79e498caa56dc34c8b5decae3",
+      "lines": 55,
+      "imports": [
+        "__future__",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/contacts_service.py",
+      "sha256": "477a69da50dd5968c5f5ceef8fb2e446db6c8b54a092023619c194a3e89be67a",
+      "lines": 134,
+      "imports": [
+        "__future__",
+        "aweb.service_errors",
+        "re",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/custody.py",
+      "sha256": "7813580c618e71ba46594c3d27ee15e5ceb68d51cb753abf95fc4ebad8e01c31",
+      "lines": 124,
+      "imports": [
+        "__future__",
+        "aweb.signing",
+        "cryptography.hazmat.primitives.ciphers.aead",
+        "logging",
+        "os",
+        "secrets",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/db.py",
+      "sha256": "e689fb336ce52d6db2d6988d0c64ca76b25c3c30af34cabad277e101a75a5fbf",
+      "lines": 110,
+      "imports": [
+        "__future__",
+        "asyncio",
+        "aweb.stable_id",
+        "fastapi",
+        "os",
+        "pathlib",
+        "pgdbm",
+        "pgdbm.migrations",
+        "typing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/deps.py",
+      "sha256": "4a5312c865bcf7e4fb331a13a3dce3106ecc8adb8b6e5b10f9c8fa65fa1e1855",
+      "lines": 20,
+      "imports": [
+        "__future__",
+        "fastapi",
+        "typing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/did.py",
+      "sha256": "a654e5319e9d99ec0bb390bdea713ebebf86f0d3dcb01927b6a99eaec252a1d8",
+      "lines": 94,
+      "imports": [
+        "__future__",
+        "base58",
+        "base64",
+        "nacl.signing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/hooks.py",
+      "sha256": "8b13bcb90410d685d01ed0c62d53ce81a5cb3fc13e60ef823ffc1ffbcbba12f8",
+      "lines": 20,
+      "imports": [
+        "__future__",
+        "fastapi",
+        "logging"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/messages_service.py",
+      "sha256": "04e7c3745688eefc0c4c65149408dbf6f9423614165af9081a5f1a922b24a1e1",
+      "lines": 116,
+      "imports": [
+        "__future__",
+        "aweb.service_errors",
+        "datetime",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/names.py",
+      "sha256": "f34451855dfdc2d5101f1403457d8d0e4fe4d1a18304904816a1c72b9d6ccb85",
+      "lines": 33,
+      "imports": [
+        "__future__"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/presence.py",
+      "sha256": "b9eb3514d2d0cc0e98f75d4b2419d42bca7a056a2cf3ef8f768951549f0a77fd",
+      "lines": 158,
+      "imports": [
+        "__future__",
+        "datetime",
+        "typing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/reservations_service.py",
+      "sha256": "23435c20b3b4d62835d0a548971bae1812d6da204dee883419e29484fe0199f9",
+      "lines": 225,
+      "imports": [
+        "__future__",
+        "aweb.service_errors",
+        "aweb.sql",
+        "datetime",
+        "json",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/rotation_announcements.py",
+      "sha256": "74928c233d76d9ca8bbbf03dccc9ce5b66ffd2f0d3036653a38223fb68ce96ac",
+      "lines": 92,
+      "imports": [
+        "__future__",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/service_errors.py",
+      "sha256": "32af2379c27a1744af17c76625d94bdaa510e1adf702a44589e7a0e0e551f454",
+      "lines": 54,
+      "imports": [
+        "__future__"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/signing.py",
+      "sha256": "cf5ab1cc499fa5e80e5ee5bcfb0d69590881e355ab0047536dd83ed3e5307328",
+      "lines": 95,
+      "imports": [
+        "__future__",
+        "aweb.did",
+        "base64",
+        "enum",
+        "json",
+        "nacl.exceptions",
+        "nacl.signing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/sql.py",
+      "sha256": "6443597b761134887db262abd342a8713a0c3bcbff595da9398e565caae89df5",
+      "lines": 18,
+      "imports": [
+        "__future__"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/stable_id.py",
+      "sha256": "901f0aecf145c126e4e80cca53853ce5c40a047a41f6a843ee1b098c40699061",
+      "lines": 175,
+      "imports": [
+        "__future__",
+        "aweb.did",
+        "base58",
+        "hashlib",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/tasks_service.py",
+      "sha256": "d5c53dea9e9c26bf7e996329cfe08edb2fadaf24d07360047cab49a70f487fea",
+      "lines": 727,
+      "imports": [
+        "__future__",
+        "aweb.service_errors",
+        "datetime",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/__init__.py",
+      "sha256": "79d53617af9815d54b4106d9b6fd484efcfc605542ce2f903e4155451d45453f",
+      "lines": 3,
+      "imports": [
+        "aweb.mcp.server"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/auth.py",
+      "sha256": "ea0356afc7727f295e6105805343a11e969483dac8060b1be9c263b56287004c",
+      "lines": 161,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "contextvars",
+        "dataclasses",
+        "fastapi",
+        "logging",
+        "starlette.requests",
+        "starlette.responses",
+        "starlette.types",
+        "typing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/server.py",
+      "sha256": "349ba4ac665d7b97b987581493c0837a9d4635d8648c2d1c0e1016b1c18eaa46",
+      "lines": 244,
+      "imports": [
+        "__future__",
+        "aweb.db",
+        "aweb.mcp.auth",
+        "aweb.mcp.tools.agents",
+        "aweb.mcp.tools.chat",
+        "aweb.mcp.tools.contacts",
+        "aweb.mcp.tools.identity",
+        "aweb.mcp.tools.locks",
+        "aweb.mcp.tools.mail",
+        "mcp.server.fastmcp",
+        "mcp.server.transport_security",
+        "redis.asyncio",
+        "typing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/tools/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lines": 0,
+      "imports": []
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/tools/agents.py",
+      "sha256": "37fd8077464f494dda6dcc28c8647807b7277c1e3988ebd030f54539601a6f7e",
+      "lines": 90,
+      "imports": [
+        "__future__",
+        "aweb.mcp.auth",
+        "aweb.presence",
+        "json",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/tools/chat.py",
+      "sha256": "4a87e5d27aac36dd9e66ab8156d719770ab64aec966e3676fb14836b4f274b39",
+      "lines": 408,
+      "imports": [
+        "__future__",
+        "asyncio",
+        "aweb.chat_service",
+        "aweb.chat_waiting",
+        "aweb.custody",
+        "aweb.mcp.auth",
+        "aweb.service_errors",
+        "datetime",
+        "json",
+        "time",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/tools/contacts.py",
+      "sha256": "c5b88118130f64c2f680b46cbfc878ef9f5417d6448aedaf28dc50b8e186404d",
+      "lines": 53,
+      "imports": [
+        "__future__",
+        "aweb.contacts_service",
+        "aweb.mcp.auth",
+        "aweb.service_errors",
+        "json",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/tools/identity.py",
+      "sha256": "434a5a26586c6df28426caaf57daf5ae8ee58c8cbcdc9ccb75728143e51e260a",
+      "lines": 55,
+      "imports": [
+        "__future__",
+        "aweb.mcp.auth",
+        "json",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/tools/locks.py",
+      "sha256": "4fdb7ec53d9147a8b48a0c841bc5484e2250e66fd76d701d5e88caf7e78ba94b",
+      "lines": 117,
+      "imports": [
+        "__future__",
+        "aweb.mcp.auth",
+        "aweb.reservations_service",
+        "aweb.service_errors",
+        "json"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/mcp/tools/mail.py",
+      "sha256": "7c762a207e409a00e55d63b09f586094b265c56e7def6f1e7c2af877ae387d30",
+      "lines": 198,
+      "imports": [
+        "__future__",
+        "aweb.custody",
+        "aweb.mcp.auth",
+        "aweb.messages_service",
+        "aweb.service_errors",
+        "datetime",
+        "json",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/migrations/aweb/001_initial.sql",
+      "sha256": "dcc383fa03c08931850c805fa82588b0519c81f5b8687b6af6b4d7763b880990",
+      "lines": 395
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/migrations/aweb/023_control_signals.sql",
+      "sha256": "afc7161a8f88ede9f699b00406a99f2c28c69a5514bd681c5e6fca37d1b34c01",
+      "lines": 13
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/__init__.py",
+      "sha256": "459af8fc9cb419123ff1a36c2671c2984af3e08b3fa2020d2490c7507bed994f",
+      "lines": 15,
+      "imports": []
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/agents.py",
+      "sha256": "87584e30c910bafc34cc2287aeaaf53786fbc3eabb1e351c03fbde8b6af7cc78",
+      "lines": 1394,
+      "imports": [
+        "__future__",
+        "aweb.alias_allocator",
+        "aweb.auth",
+        "aweb.custody",
+        "aweb.deps",
+        "aweb.did",
+        "aweb.hooks",
+        "aweb.presence",
+        "aweb.signing",
+        "aweb.stable_id",
+        "base64",
+        "fastapi",
+        "json",
+        "nacl.exceptions",
+        "nacl.signing",
+        "os",
+        "pydantic",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/auth.py",
+      "sha256": "39821ecb77ad1750416b6f3909053b1649bb7e6d06159a854e470d520906572b",
+      "lines": 111,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.deps",
+        "fastapi",
+        "json",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/chat.py",
+      "sha256": "f9c3bac74c629d204a31f7309805463a1b7ebf97661be2941ac3cfd44f619e07",
+      "lines": 1101,
+      "imports": [
+        "__future__",
+        "asyncio",
+        "asyncpg.exceptions",
+        "aweb.auth",
+        "aweb.chat_service",
+        "aweb.chat_waiting",
+        "aweb.contacts_service",
+        "aweb.custody",
+        "aweb.deps",
+        "aweb.hooks",
+        "aweb.messages_service",
+        "aweb.routes",
+        "aweb.stable_id",
+        "datetime",
+        "fastapi",
+        "fastapi.responses",
+        "json",
+        "logging",
+        "pydantic",
+        "time",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/claims.py",
+      "sha256": "f3e4a89aeb57038178a422529e452cdb47d08994ef0c0005197167d6cabbad2c",
+      "lines": 70,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.deps",
+        "fastapi",
+        "pydantic",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/contacts.py",
+      "sha256": "c403992966d7345da2b328bcee8c657569ac42158716bdf2c4096b9fcc707914",
+      "lines": 71,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.contacts_service",
+        "aweb.deps",
+        "fastapi",
+        "pydantic"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/conversations.py",
+      "sha256": "a26b737dd8c32ce1613ed078ccef5e5ee319e33853aab7f2f4ddf67f8095c01d",
+      "lines": 200,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.deps",
+        "datetime",
+        "fastapi",
+        "pydantic",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/events.py",
+      "sha256": "e47ec6ed8995baffa1b87a201985c1aef7e8d3eca626b6d4014f6d1a35db8ba9",
+      "lines": 327,
+      "imports": [
+        "__future__",
+        "asyncio",
+        "aweb.auth",
+        "aweb.deps",
+        "collections.abc",
+        "datetime",
+        "fastapi",
+        "fastapi.responses",
+        "json",
+        "logging",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/init.py",
+      "sha256": "62c8e9a80ac0c129b0b003f4c37a406e18c2dded66e3b0332ae05fe6d3c87b20",
+      "lines": 156,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.bootstrap",
+        "aweb.deps",
+        "aweb.hooks",
+        "datetime",
+        "fastapi",
+        "pydantic",
+        "typing"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/messages.py",
+      "sha256": "626a3d220be91cac55c812792962e20e7d5384849234e1fa1fb41dc2ded51d4b",
+      "lines": 508,
+      "imports": [
+        "__future__",
+        "asyncpg.exceptions",
+        "aweb.auth",
+        "aweb.contacts_service",
+        "aweb.custody",
+        "aweb.deps",
+        "aweb.hooks",
+        "aweb.messages_service",
+        "aweb.rotation_announcements",
+        "aweb.routes",
+        "aweb.stable_id",
+        "datetime",
+        "fastapi",
+        "fastapi.responses",
+        "pydantic",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/policies.py",
+      "sha256": "aa66827a8fae46e8df0a356857f61185bcbe07ec7b755a70254a55bcd5451f56",
+      "lines": 245,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.deps",
+        "fastapi",
+        "json",
+        "pydantic",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/projects.py",
+      "sha256": "846fea89ae9610763ae982b0e2d76ba66fb0991b12d23d1bf090ed8fc08ba6bf",
+      "lines": 30,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.deps",
+        "fastapi",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/reservations.py",
+      "sha256": "a6e13391f946a5c472be2fe9b04a45cf0b24e4158fcbc27bcbf5ba8a97edfb34",
+      "lines": 257,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.deps",
+        "aweb.hooks",
+        "aweb.reservations_service",
+        "aweb.sql",
+        "datetime",
+        "fastapi",
+        "fastapi.responses",
+        "pydantic",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/status.py",
+      "sha256": "ee38636a5cafe1d067b134bcd913d153b842142650cd8afe24fbea746f84b3a8",
+      "lines": 224,
+      "imports": [
+        "__future__",
+        "asyncio",
+        "aweb.auth",
+        "aweb.deps",
+        "aweb.presence",
+        "collections.abc",
+        "datetime",
+        "fastapi",
+        "fastapi.responses",
+        "json",
+        "pydantic",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "aweb",
+      "path": "src/aweb/routes/tasks.py",
+      "sha256": "fb93fd801c1596283a4436fc877fd445e6dbd1352582fd4da371a751bd061874",
+      "lines": 290,
+      "imports": [
+        "__future__",
+        "aweb.auth",
+        "aweb.deps",
+        "aweb.hooks",
+        "aweb.tasks_service",
+        "fastapi",
+        "pydantic",
+        "typing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/__init__.py",
+      "sha256": "f4e0087f741f81b21d626d6188d28f772b4f0363fe4d5062652f891633b04153",
+      "lines": 75,
+      "imports": [
+        "pgdbm.__version__",
+        "pgdbm.core",
+        "pgdbm.errors",
+        "pgdbm.migrations",
+        "pgdbm.monitoring",
+        "pgdbm.testing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/__version__.py",
+      "sha256": "657212d86066dfd8497e2d88e540fdd73632b6c80d6352e91c62accd01c55501",
+      "lines": 12,
+      "imports": []
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/core.py",
+      "sha256": "d67fef12b69f7c34e0c3e7b66bca892f134da7325bbe9f29a85c22887fafdfc9",
+      "lines": 989,
+      "imports": [
+        "asyncio",
+        "asyncpg",
+        "collections.abc",
+        "contextlib",
+        "logging",
+        "os",
+        "pgdbm.errors",
+        "pydantic",
+        "re",
+        "ssl",
+        "typing",
+        "urllib.parse"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/errors.py",
+      "sha256": "9715ad03a2820446235bd6cdc769f14221156227bc4ba09c88f1cc8449da0113",
+      "lines": 162,
+      "imports": [
+        "typing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/migrations.py",
+      "sha256": "0bab1bcc8ee8e868b5a6b0d5485bf92f03166cc4a6e8002ec36f4fe7ac0202f1",
+      "lines": 784,
+      "imports": [
+        "datetime",
+        "hashlib",
+        "logging",
+        "os",
+        "pathlib",
+        "pgdbm.core",
+        "pgdbm.errors",
+        "pydantic",
+        "re",
+        "time",
+        "typing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/monitoring.py",
+      "sha256": "636116357f124db66f563c1ffb2ecb77238c91b5c5eae5ea22a18e4366ac8163",
+      "lines": 418,
+      "imports": [
+        "datetime",
+        "functools",
+        "logging",
+        "pgdbm.core",
+        "pydantic",
+        "time",
+        "typing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/testing.py",
+      "sha256": "09830ccab7b67da6710e5c094e181fd74a422a9d3ec13a59dbc3ad0dbe075724",
+      "lines": 436,
+      "imports": [
+        "asyncpg",
+        "collections.abc",
+        "contextlib",
+        "datetime",
+        "json",
+        "logging",
+        "os",
+        "pathlib",
+        "pgdbm.core",
+        "pgdbm.errors",
+        "pydantic",
+        "re",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/__init__.py",
+      "sha256": "e8cd26e40a78da5da77a2e8b2085e9b2256d2e05813cfddee42880d9bac90938",
+      "lines": 5,
+      "imports": [
+        "main"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/config.py",
+      "sha256": "b195dab16659cacc29bd47fb7a5ea4f0c3e2039052206919a12f70af40773c16",
+      "lines": 243,
+      "imports": [
+        "os",
+        "pathlib",
+        "pydantic",
+        "tomli",
+        "tomllib",
+        "typing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/main.py",
+      "sha256": "dc511737f546f94e96af27a183f4c87306c9b6f8161429b9e36ce907358936ad",
+      "lines": 77,
+      "imports": [
+        "click",
+        "commands",
+        "config",
+        "pathlib",
+        "pgdbm",
+        "sys",
+        "typing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/utils.py",
+      "sha256": "c46b4838fc7d27e1e6b8d7547e885a851db5dbc974b67d4468e6e9212d7df4d4",
+      "lines": 117,
+      "imports": [
+        "asyncio",
+        "collections.abc",
+        "concurrent.futures",
+        "config",
+        "pgdbm",
+        "threading",
+        "typing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/commands/__init__.py",
+      "sha256": "ebf004be5b81cfd26e3fdcec12d581b8a4458a92bd81a4a255200c8fd6e9d699",
+      "lines": 5,
+      "imports": [
+        ""
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/commands/db.py",
+      "sha256": "b25bc244e97066688c13682106a27a9da27369fd3cc6e826fb01de78034a030a",
+      "lines": 281,
+      "imports": [
+        "asyncpg",
+        "click",
+        "config",
+        "pgdbm",
+        "urllib.parse",
+        "utils"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/commands/dev.py",
+      "sha256": "998a3330b95228efdcb69d06c74af958e3b29e51c28e4c0d60df5336fddc0e81",
+      "lines": 276,
+      "imports": [
+        "asyncio",
+        "click",
+        "config",
+        "db",
+        "migrate",
+        "pathlib",
+        "pgdbm",
+        "signal",
+        "sys",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/commands/generate.py",
+      "sha256": "0a8ee5b83529d890425b5e6dbab99d4c311c7351ee6c1d5d9213f0021ff5185e",
+      "lines": 581,
+      "imports": [
+        "click",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/commands/migrate.py",
+      "sha256": "c926bf4a7e574120aa512ccdd48e138d8227c80e77a85237e1dd866628a03447",
+      "lines": 442,
+      "imports": [
+        "click",
+        "config",
+        "datetime",
+        "pathlib",
+        "pgdbm",
+        "re",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/cli/commands/schema.py",
+      "sha256": "d2e2d000f23df3afd2922945c947d548703c5f3808022955ea3f1cab847e969d",
+      "lines": 272,
+      "imports": [
+        "click",
+        "config",
+        "pgdbm",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/fixtures/__init__.py",
+      "sha256": "2c373873e65e999d19a544b7111c207369310797e72deeaff8ba11f2887f8a11",
+      "lines": 17,
+      "imports": []
+    },
+    {
+      "owner": "pgdbm",
+      "path": "src/pgdbm/fixtures/conftest.py",
+      "sha256": "7538ee2bc20065d6c9a76aba849de555a0783e2c730b29cb31624f9dc751ca44",
+      "lines": 300,
+      "imports": [
+        "collections.abc",
+        "os",
+        "pgdbm.core",
+        "pgdbm.testing",
+        "pytest",
+        "pytest_asyncio",
+        "typing"
+      ]
+    }
+  ],
+  "limitations": [
+    "Source artifact aweb 0.3.8 pinned by released sdist sha256; attempted v0.3.8 and server-v0.3.8 upstream commit lookups returned 422, so no fabricated commit equivalence.",
+    "Cloudflare documentation is current as observed, not a recorded runtime execution.",
+    "No architecture decision or rollout authorization is made by these findings."
+  ]
+}
