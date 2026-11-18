@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "question": "What supported mechanism can deliver an authenticated coordination event to an intended existing local Codex Desktop chat and cause an observable turn while preserving identity, workspace and policy?",
+  "ticket": "https://github.com/brent-stone/beadhub-oss/issues/4",
+  "repository_baseline": "dd9541afbb2882d191173f46ab5b3503adde7709",
+  "research_branch": "research/desktop-wake",
+  "qualification_level": "primary_source_research_and_read_only_installed_help",
+  "live_desktop_wake_tested": false,
+  "user_confirmed_scope": {
+    "authority": "User clarification relayed by parent researcher during this investigation",
+    "required": "Resume an idle existing Codex Desktop chat while Desktop is running and workstation is awake",
+    "unavailable": "Retain coordination messages while unavailable; launching Desktop or waking the workstation is not required",
+    "enforcement": "Ownership enforced at admission and protected integration; private local investigation permitted"
+  },
+  "conclusion": {
+    "status": "candidate_path_identified_desktop_attachment_unproven",
+    "summary": "Current official queue/resume and App Server interfaces are candidates for a trusted local companion. They do not by themselves establish that this installed Desktop exposes its owning backend to that companion or consumes queued input in the intended idle local chat. No supported end-to-end automatic Desktop wake is established by this investigation.",
+    "required_next_proof": "For the actual installed Desktop build, demonstrate a documented, authorized route to its existing chat's owning backend, then authenticated event admission -> same chat UUID -> observable turn -> event-ID acknowledgement in Desktop, preserving workspace and policy. A separate headless/CLI session or cloud Work task fails this condition."
+  },
+  "sources": [
+    {
+      "id": "official_cli",
+      "url": "https://learn.chatgpt.com/docs/cli/reference.md",
+      "owner": "OpenAI",
+      "claims": [
+        "codex queue addresses existing session UUID or exact name; UUID avoids title ambiguity",
+        "Current documentation describes --resume requiring a running local daemon or explicit --remote server",
+        "Resume failure can emit a warning while command still exits successfully",
+        "App Server command is development/debugging surface that may change"
+      ],
+      "retrieved_sha256": "38dcd61856e2655be6fe4aa156a8530c16a404dc95ecb6b01f45df66643b2e52"
+    },
+    {
+      "id": "official_hooks",
+      "url": "https://learn.chatgpt.com/docs/hooks.md",
+      "owner": "OpenAI",
+      "claims": [
+        "Hooks run at defined lifecycle/tool/model events; no idle incoming-event callback is documented",
+        "SessionStart can register session_id and cwd with a companion; subagent hooks use the parent session_id, so registration must exclude subagent confusion",
+        "Stop can request continuation at end of a turn; it cannot cause an event after a settled idle period by itself",
+        "Non-managed hooks require review/trust; transcript format is not a stable hook interface"
+      ],
+      "retrieved_sha256": "37cdbfc3b9d19925f88af3e680399fd61bd3d15979961302160f97698cc5a841"
+    },
+    {
+      "id": "official_plugin",
+      "url": "https://developers.openai.com/plugins/build/plugins.md",
+      "owner": "OpenAI",
+      "claims": [
+        "Plugins can bundle skills, MCP servers and lifecycle hooks",
+        "Lifecycle hooks in this packaging guide are for manually installed Codex desktop plugins",
+        "Installation and hook trust are separate authorized prototype steps, not performed here"
+      ],
+      "retrieved_sha256": "b913de64a45a90f14fba0d4b0654444f1f60f4e2d4f79f3dd41332895f79721d"
+    },
+    {
+      "id": "official_events",
+      "url": "https://developers.openai.com/plugins/build/mcp-events.md",
+      "owner": "OpenAI",
+      "claims": [
+        "Availability is Work web, desktop Work with Cloud selected, and dots",
+        "This does not document event-triggered local Codex Desktop chats",
+        "Signed webhook receipt is asynchronous and does not prove task execution",
+        "The integration supports webhook delivery and callback verification; polling, streaming and draft gap/terminated control notifications are not supported",
+        "Stable event identity, bounded retries, idempotent effects, persisted subscriptions and revocation are documented recovery concerns"
+      ],
+      "retrieved_sha256": "97bca8eee9ec2f5224a5da8fdbb6f953b366283085d62ec2f9b430ebc9cbbf86"
+    },
+    {
+      "id": "official_app_server",
+      "url": "https://learn.chatgpt.com/docs/app-server.md",
+      "owner": "OpenAI",
+      "claims": [
+        "App Server is a rich-client integration interface",
+        "thread/resume reopens a saved thread; turn/start begins generation for a target thread; turn/steer requires an active expectedTurnId",
+        "thread/read and thread/inject_items do not themselves start a turn",
+        "Turn lifecycle notifications allow stronger receipts than queue acknowledgement",
+        "TCP WebSocket transport is explicitly experimental and unsupported; use of an owning local backend requires actual supported endpoint discovery rather than assuming a newly spawned server is Desktop"
+      ],
+      "retrieved_sha256": "15d685b40173d17e7adc30ac60bd67da1eaa7632deba1fbfe53779f29206cb80"
+    },
+    {
+      "id": "official_remote",
+      "url": "https://learn.chatgpt.com/docs/remote-connections.md",
+      "owner": "OpenAI",
+      "claims": [
+        "First-party paired mobile/desktop remote access can continue existing chats on an awake running signed-in desktop host",
+        "This is a first-party product journey, not documentation of a third-party event ingress API; no pairing or account changes performed"
+      ],
+      "retrieved_sha256": "6e705fa5ea3407349fac52c8b21493b1a45f560bc186493e1faa80e35150fd3f"
+    },
+    {
+      "id": "official_queue_source",
+      "url": "https://github.com/openai/codex/blob/fecf5cc672538029b3b1adc00204a78e416a19a3/codex-rs/tui/src/session_queue_commands.rs",
+      "owner": "OpenAI",
+      "revision": "fecf5cc672538029b3b1adc00204a78e416a19a3",
+      "claims": [
+        "Queue resolves selected server, uses thread/queue/add and returns queued submission ID",
+        "Name lookup includes Atlas/ChatGPT sessions as a fallback; this is candidate compatibility evidence, not proof of installed Desktop attachment",
+        "Resume warning does not fail the command; resume_if_unloaded rejects embedded server and only resumes a notLoaded thread",
+        "Queue client generates a new client_user_message_id per invocation, so blind CLI retries are not an application-level exactly-once strategy"
+      ]
+    },
+    {
+      "id": "official_queue_flags",
+      "url": "https://github.com/openai/codex/blob/fecf5cc672538029b3b1adc00204a78e416a19a3/codex-rs/cli/src/queue_cmd.rs",
+      "owner": "OpenAI",
+      "revision": "fecf5cc672538029b3b1adc00204a78e416a19a3",
+      "claims": [
+        "Current source includes --resume; read-only installed help must be checked independently"
+      ]
+    },
+    {
+      "id": "official_daemon",
+      "url": "https://github.com/openai/codex/blob/fecf5cc672538029b3b1adc00204a78e416a19a3/codex-rs/app-server-daemon/README.md",
+      "owner": "OpenAI",
+      "revision": "fecf5cc672538029b3b1adc00204a78e416a19a3",
+      "claims": [
+        "Daemon lifecycle is experimental",
+        "Daemon supports Linux, macOS and Windows with platform restrictions; shared clients inherit daemon environment",
+        "WSL CLI, Windows Desktop and their separate CODEX_HOME/runtime boundaries must not be presumed identical",
+        "Installing/updating CLI does not establish Desktop backend version or ownership"
+      ]
+    },
+    {
+      "id": "official_changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog",
+      "owner": "OpenAI",
+      "claims": [
+        "Current release history evolves queue, daemon, remote and host-owned thread behavior; individual release notes do not establish this installed Desktop's third-party attach contract"
+      ]
+    },
+    {
+      "id": "aweb_terminal",
+      "url": "https://github.com/awebai/aweb/blob/1277041b2b8b968410e92a5b36a59f3c0592981b/docs/terminal-wake-broker.md",
+      "owner": "awebai",
+      "revision": "1277041b2b8b968410e92a5b36a59f3c0592981b",
+      "claims": [
+        "aw wake supervises OATS-launched terminal sessions and channel-core delivery",
+        "Go owns lifecycle/streams; channel-core fetches exact messages, verifies/decrypts and submits terminal input",
+        "Known-working mail defers, chat may steer, blocked modal/raw-shell/absent sessions refuse; unknown readiness can deliver",
+        "submitted:true proves terminal paste/Enter, not intended model consumption or completed work",
+        "Delivered-ID marks and read acknowledgements concern presentation with documented crash windows; they do not prove Desktop wake"
+      ]
+    },
+    {
+      "id": "aweb_skills",
+      "url": "https://github.com/awebai/aweb/blob/1277041b2b8b968410e92a5b36a59f3c0592981b/packages/codex-plugin/README.md",
+      "owner": "awebai",
+      "revision": "1277041b2b8b968410e92a5b36a59f3c0592981b",
+      "claims": [
+        "Existing Codex plugin packages generated skills, not a demonstrated native Desktop event/wake endpoint"
+      ]
+    },
+    {
+      "id": "aweb_oats_policy",
+      "url": "https://github.com/awebai/aweb/blob/1277041b2b8b968410e92a5b36a59f3c0592981b/knowledge/aweb-protocol-expert/decisions/codex-live-delivery-is-the-oats-wake.md",
+      "owner": "awebai",
+      "revision": "1277041b2b8b968410e92a5b36a59f3c0592981b",
+      "claims": [
+        "Upstream supported Codex live delivery journey is OATS terminal wake; standalone Codex reads when asked",
+        "A working compatibility command is not automatically the upstream supported journey"
+      ]
+    },
+    {
+      "id": "aw_oats_transport",
+      "url": "https://github.com/awebai/aw/blob/d36bfb9de23a0256c1b8721c009ca2895f985064/wake/oats_command.ts",
+      "owner": "awebai",
+      "revision": "d36bfb9de23a0256c1b8721c009ca2895f985064",
+      "claims": [
+        "OATS command transport spawns a process and parses an envelope including present/state/submitted; it is terminal transport rather than a Desktop turn receipt"
+      ]
+    }
+  ],
+  "surface_comparison": [
+    {
+      "surface": "Active local turn",
+      "feasibility": "Lifecycle hook/MCP mail check or bounded Stop continuation can discover pending work while runtime already runs",
+      "limit": "Does not establish later idle wake"
+    },
+    {
+      "surface": "Existing idle local Desktop, running and host awake",
+      "feasibility": "Queue on actual owning backend or documented App Server attach is candidate",
+      "limit": "Installed Desktop endpoint discovery, authorization, writer/approval ownership, wake consumption and UI notification remain unproven"
+    },
+    {
+      "surface": "Desktop closed or host unavailable",
+      "feasibility": "Companion/service retains durable pending events and retries after explicit availability",
+      "limit": "Launching Desktop and waking host are outside confirmed success envelope"
+    },
+    {
+      "surface": "Desktop restart recovery",
+      "feasibility": "Lifecycle re-registration and durable event ledger can reconcile",
+      "limit": "Automatic same Desktop chat reacquisition is not established; no blind replay of effects"
+    },
+    {
+      "surface": "CLI/headless/App Server-owned chat",
+      "feasibility": "Documented resume/start and current queue interfaces can support that runtime",
+      "limit": "Different execution surface does not satisfy local Desktop requirement"
+    },
+    {
+      "surface": "Cloud Work/dots",
+      "feasibility": "MCP Events is documented for these surfaces",
+      "limit": "Different orchestration and execution boundary; does not satisfy local Desktop requirement"
+    },
+    {
+      "surface": "aweb OATS Codex terminal seat",
+      "feasibility": "Upstream broker has inspect/input and presentation state",
+      "limit": "Different surface and weaker terminal submission receipt; cannot certify Desktop wake"
+    }
+  ],
+  "prototype_proposal": {
+    "status": "design_only_not_run",
+    "boundary": "Small manually installed plugin plus per-user local companion; reusable authenticated event/recovery core with a Desktop-specific adapter only if supported attachment is established",
+    "steps": [
+      "First gate: identify exact Desktop build, OS, backend owner and supported local attach/queue contract without token extraction or private IPC. Stop with a concrete upstream support gap if none is available.",
+      "Plugin SessionStart hook registers a main-chat binding through owner-only local IPC: opaque coordination identity, host/runtime instance, thread/session UUID relationship, workspace/project root, policy fingerprint, and generation. Never bind by title or arbitrary event-supplied UUID/path.",
+      "Companion authenticates service and recipient, validates access and binding generation, fetches permitted content, stores event ID/hash/expiry durably before attempting admission; treat event content as untrusted data.",
+      "Admission and protected integration enforce ownership. Queue ordinary busy-chat mail for a later turn; do not interrupt approval/question prompts. Only an expressly authorized steer uses the current expectedTurnId. Never synthesize Enter or answer prompts.",
+      "For an idle chat use the qualified owning-backend queue/resume or resume/start route. Do not create/fork or silently fall back to an embedded/headless server. Keep original model/workspace/sandbox/approval settings.",
+      "Persist event-to-queue/turn correlation and deduplication across companion restarts. If acknowledgement is uncertain, reconcile queue/history/event acknowledgement before resubmission. CLI creates new client IDs, so a zero exit or retry is not deduplication.",
+      "Keep unavailable events pending with backoff/expiry and explicit operator reconciliation. On Desktop restart renew generation and revalidate identity/workspace/policy before draining. Do not infer completed effects from read/delivered state."
+    ],
+    "required_receipts": [
+      "Authenticated event received and durable event ID/hash stored",
+      "Target binding admitted: exact Desktop chat UUID, host/backend/build, workspace and policy fingerprint",
+      "Queued/submitted receipt with queue ID; record warnings separately",
+      "Observed new turn ID/status for exact same Desktop chat",
+      "Agent acknowledgement echoing synthetic event ID and expected workspace, visible in Desktop",
+      "Separate completed-action receipt if a task effect is requested",
+      "Negative cases: duplicate event, busy/permission-blocked chat, wrong identity/workspace/generation, unavailable host, restart with uncertain acknowledgement"
+    ]
+  },
+  "unproven_capabilities": [
+    "Installed Desktop offers a supported authorized third-party path to its actual owning local chat backend, across Windows/WSL boundary if used",
+    "That path can accept an event and start an observable turn in an already-idle existing Desktop chat without creating a different runtime/chat",
+    "Desktop and companion share defined writer, approval and notification ownership preserving policy and workspace",
+    "Version-specific queue support and reconnect/restart behavior on the owning backend"
+  ],
+  "performed_actions": [
+    "Read public ticket/map and repository instructions",
+    "Fetched official OpenAI documentation and pinned public source",
+    "Read pinned upstream aweb/aw terminal wake and plugin sources",
+    "Inspected installed WSL codex version/queue/app-server help only",
+    "Published public/synthetic machine-readable evidence on assigned research branch"
+  ],
+  "not_performed": [
+    "No live wake/message injection or Desktop automation",
+    "No plugin installation or settings/account changes",
+    "No server/daemon start, deployment or runtime upgrade",
+    "No browser token/private IPC extraction",
+    "No upstream team enrollment",
+    "No issue/map edits or ticket closure",
+    "No changes to main or other branches"
+  ],
+  "observed_at_utc": "2026-11-18T22:06:00.845839+00:00",
+  "installed_observation": {
+    "surface": "WSL CLI, not Desktop backend",
+    "version": "codex-cli 0.149.1",
+    "queue_help_has_resume_flag": false,
+    "queue_help_has_thread_flag": true,
+    "queue_help_has_remote_flag": true,
+    "app_server_help_has_daemon": true,
+    "app_server_help_has_unix": true,
+    "queue_help_sha256": "1c1bed6b2c7620c6f661114c7469d22286431b409f2e15446552a19ce75eb797",
+    "app_server_help_sha256": "95d290035d274e91e6f85b9af63e9a3fd2cf70a2295d9eedbfc23a2ee82d4383",
+    "version_gap": "Installed codex-cli 0.149.1 lacks --resume in queue help while current official docs/source contain it; neither proves the installed Desktop backend version"
+  }
+}
